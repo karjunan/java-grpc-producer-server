@@ -27,10 +27,14 @@ message AddPhotoResponse {
   bool isOk = 1;
 }
 
-service EmployeeConsumerService {
+message EmployeeSuccessResponse {
+  bool isOk = 1;
+}
+
+service EmployeeProducerService {
   rpc GetByBadgeNumber (GetByBadgeNumberRequest) returns (EmployeeResponse);
   rpc GetAll (GetAllRequest) returns (stream EmployeeResponse);
   rpc Save (EmployeeRequest) returns (EmployeeResponse);
-  rpc SaveAll (stream EmployeeRequest) returns (stream EmployeeResponse);
+  rpc SaveAll (stream EmployeeRequest) returns (EmployeeSuccessResponse);
   rpc AddPhoto (stream AddPhotoRequest) returns (AddPhotoResponse);
 }

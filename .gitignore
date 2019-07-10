@@ -4,3 +4,4 @@ out
 java-grpc-server.iml
 java-grpc-server.jar
 *.jar
+*.iml

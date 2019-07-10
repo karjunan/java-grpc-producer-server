@@ -34,7 +34,7 @@ message EmployeeSuccessResponse {
 service EmployeeProducerService {
   rpc GetByBadgeNumber (GetByBadgeNumberRequest) returns (EmployeeResponse);
   rpc GetAll (GetAllRequest) returns (stream EmployeeResponse);
-  rpc Save (EmployeeRequest) returns (EmployeeResponse);
+  rpc Save (EmployeeRequest) returns (EmployeeSuccessResponse);
   rpc SaveAll (stream EmployeeRequest) returns (EmployeeSuccessResponse);
   rpc AddPhoto (stream AddPhotoRequest) returns (AddPhotoResponse);
 }
